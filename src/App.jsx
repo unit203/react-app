@@ -1,21 +1,13 @@
 // import logo from './logo.svg';
 import { NavLink, Route, Routes } from "react-router-dom";
-// import { Route, Routes } from "react-router-dom";
-const Profile = () => {
-  return <h1>Это страница с профилем</h1>
-}
-
-const Messages = () => {
-  return <h1>Страница сообщений</h1>
-}
-
-const Settings = () => {
-  return <h1>Страница с настройками</h1>
-}
+import { Profile } from "./components/Profile";
+import { Settings } from "./components/Settings";
+import { Messages } from "./components/Messages";
+import { Friends } from "./components/Friends";
 
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <div className="container mt-5">
       <div className="row">
@@ -31,10 +23,16 @@ function App() {
           <div className="nav flex-column nav-pills">
             <NavLink to="settings" className="nav-link text-center">Настройки</NavLink>
           </div>
+          <div className="nav flex-column nav-pills">
+            <NavLink to="friends" className="nav-link text-center">Друзья</NavLink>
+          </div>
         </div>
         <div className="col-md-9">
           <Routes>
-            <Route path="/profile" element={<Profile />}></Route>
+
+            <Route path="/" element={<h3>Ваш личный кабинет. Воспользуйтесь меню слева</h3>}/>
+            <Route path="/profile" element={<Profile function={props.functions.key_getUser} />}></Route>
+            <Route path="/friends" element={<Friends function={props.functions.key_getUsers} />}></Route>
             <Route path="/messages" element={<Messages />}></Route>
             <Route path="/settings" element={<Settings />}></Route>
           </Routes>
