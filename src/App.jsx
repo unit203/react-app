@@ -31,7 +31,7 @@ function App(props) {
           <Routes>
 
             <Route path="/" element={<h3>Ваш личный кабинет. Воспользуйтесь меню слева</h3>}/>
-            <Route path="/profile" element={<Profile function={props.functions.key_getUser} />}></Route>
+            <Route path="/profile/*" element={<Profile function={props.functions.key_getUser} />}></Route>
             <Route path="/friends" element={<Friends function={props.functions.key_getUsers} />}></Route>
             <Route path="/messages" element={<Messages />}></Route>
             <Route path="/settings" element={<Settings />}></Route>
