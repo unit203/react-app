@@ -31,6 +31,7 @@ export function getUser(userId) {
 export async function getUsers() {
   let response = await fetch("https://www.user.lh1.in/getUsers");
   users = await response.json();
-  console.log(users);
+  // console.log(users);
   return users;
 }
+
