@@ -19,7 +19,7 @@ let users=[];
 
 export function getUser(userId) {
   console.log(users);
-  for (let i = 0; i < Object.keys(users).length; i++) {
+  for (let i = 0; i < users.length; i++) {
     // console.log(users[i]);
     if (users[i].id == userId) return users[i];
   }
