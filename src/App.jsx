@@ -13,18 +13,18 @@ function App(props) {
       <div className="row">
         <div className="col-md-3">
           <div className="nav flex-column nav-pills">
-            <NavLink to="profile" className="nav-link text-center">Профиль</NavLink>
+            <NavLink to="profile" className="text-center nav-link">Профиль</NavLink>
           </div>
 
           <div className="nav flex-column nav-pills">
-            <NavLink to="messages" className="nav-link text-center">Сообщения</NavLink>
+            <NavLink to="messages" className="text-center nav-link">Советы</NavLink>
           </div>
 
           <div className="nav flex-column nav-pills">
-            <NavLink to="settings" className="nav-link text-center">Настройки</NavLink>
+            <NavLink to="settings" className="text-center nav-link">Настройки</NavLink>
           </div>
           <div className="nav flex-column nav-pills">
-            <NavLink to="friends" className="nav-link text-center">Друзья</NavLink>
+            <NavLink to="friends" className="text-center nav-link">Друзья</NavLink>
           </div>
         </div>
         <div className="col-md-9">

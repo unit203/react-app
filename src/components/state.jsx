@@ -17,6 +17,7 @@ let users=[];
 //   4: {id: 11, name: "ernest", lastname: "FonClausevic", email: "fonclausevic@del.com", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlciUyMHBlcnNvbmF8ZW58MHx8MHx8fDA%3D&w=300&q=80",},
 // }
 
+
 export function getUser(userId) {
   console.log(users);
   for (let i = 0; i < users.length; i++) {
@@ -24,6 +25,7 @@ export function getUser(userId) {
     if (users[i].id == userId) return users[i];
   }
 
+  
 
   return user;
 }
